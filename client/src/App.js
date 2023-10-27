@@ -1,9 +1,12 @@
 import React from "react";
+import Header from "./components/Header";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="App">
-      <h1 className="text-red-600 text-2xl">Bazar E-commerce</h1>
+      <Header />
+      <Home />
     </div>
   );
 }
