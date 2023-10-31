@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductsCard from './ProductsCard';
 
 function Products() {
   return (
@@ -16,8 +17,8 @@ function Products() {
           suscipit morbi penatibus nullam, consequat porta nisi odio montes.
         </p>
       </section>
-      <section>
-        
+      <section className='max-w-screen-xl mx-auto'>
+        <ProductsCard />
       </section>
     </main>
   );
