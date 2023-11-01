@@ -6,7 +6,7 @@ function Products() {
     <main className='py-10'>
       <section className='flex flex-col items-center gap-4'>
         <h1 className='text-2xl bg-black text-white py-2 w-80 text-center'>
-          Compra siempre
+          ¡ Ofertas siempre !
         </h1>
         <span className='w-20 h-[3px] bg-black'></span>
         <p className='max-w-[700px] text-gray-600 text-center'>
