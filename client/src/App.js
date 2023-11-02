@@ -8,6 +8,7 @@ import {
   RouterProvider,
   ScrollRestoration,
 } from 'react-router-dom';
+import Cart from "./pages/Cart";
 
 const Layout = ()=>{
   return (
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       }
     ]
   }
@@ -35,9 +40,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="font-bodyFont">
-      <Header />
-      <Home />
-      <Footer />
+      <RouterProvider router={router} />
     </div>
   );
 }
