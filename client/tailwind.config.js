@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        bodyFont: "Poppins",
-        titleFont: "Nunito Sans",
+        bodyFont: "Poppins, sans-serif",
+        titleFont: "Nunito, sans-serif",
       }
     },
   },
