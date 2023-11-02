@@ -18,7 +18,7 @@ function Footer() {
         {/* LogoIcon Aqui */}
         <div className='flex flex-col gap-7'>
           <img className='w-10' src={logoLight} alt='logoLight' />
-          <p className='text-white text-sm tracking-wide'>© AlejoDev</p>
+          <p className='text-white text-sm tracking-wide'>© AlejoDev 2023</p>
           <div className='flex gap-5'>
             <img className='w-6' src={PaypalLogo} alt='paymentLogo' />
             <img className='w-9' src={paymentLogo2} alt='paymentLogo' />
