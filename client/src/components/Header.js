@@ -1,7 +1,11 @@
 import React from 'react';
 import {cartImg, logoDark, userLogo} from "../assets/index";
+import { useSelector } from 'react-redux';
+//import { cartImg, logoDark} from '../assets/index';
 
 const Header = () => {
+  const productData = useSelector((state) => state.bazar.productData);
+  console.log(productData);
   return (
     <div className='w-full h-20 bg-white border-b-[1px] border-b-gray-800 font-titleFont sticky top-0 z-50'>
 
@@ -45,7 +49,7 @@ const Header = () => {
             <img className='w-11' src={cartImg} alt='cartImg'></img>
             <span className='absolute w-6 top-3 left-1 text-sm flex items-center
             justify-center font-semibold'>
-              0
+              {productData.length}
             </span>
           </section>
           <img className='w-10 h-10'

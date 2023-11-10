@@ -1,8 +1,11 @@
 import React from 'react';
 import { BsArrowRight } from 'react-icons/bs';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { addToCart } from '../redux/bazarSlice';
 
 const  ProductsCard = ({product}) => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const _id = product.title;
   const idString = (_id) =>{
@@ -39,7 +42,17 @@ const  ProductsCard = ({product}) => {
               <p className='line-through text-gray-500'>${product.oldPrice}</p>
               <p className='font-semibold'>${product.price}</p>
             </div>
-            <p className='absolute z-20 w-[100px] text-gray-500 hover:text-gray-900 flex 
+            <p onClick={() => 
+            dispatch(
+              addToCart({
+                _id: product._id,
+                title: product.title,
+                image: product.image,
+                price: product.price,
+                quantity: 1,
+                description: product.description,
+              })
+            )} className='absolute z-20 w-[100px] text-gray-500 hover:text-gray-900 flex 
               items-center gap-1 top-0 text-sm transform -translate-x-32 group-hover:translate-x-0
               transition-transform cursor-pointer duration-500'>
               Agregar
