@@ -23,7 +23,7 @@ const Header = () => {
             <li className='text-base text-black font-bold hover:text-orange-900 
               hover:underline underline-offset-2 decoration-[10x] cursor-pointer
               duration-300'>
-              Inicio
+             <Link to="/">Inicio</Link> 
             </li>
             <li className='text-base text-black font-bold hover:text-orange-900 
               hover:underline underline-offset-2 decoration-[10x] cursor-pointer
