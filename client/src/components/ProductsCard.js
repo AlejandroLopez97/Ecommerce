@@ -3,6 +3,8 @@ import { BsArrowRight } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addToCart } from '../redux/bazarSlice';
+import {ToastContainer, toast} from 'react-toastify';
+
 
 const  ProductsCard = ({product}) => {
   const dispatch = useDispatch();
@@ -52,7 +54,7 @@ const  ProductsCard = ({product}) => {
                 quantity: 1,
                 description: product.description,
               })
-            )} className='absolute z-20 w-[100px] text-gray-500 hover:text-gray-900 flex 
+            )& toast.success(`${product.title} es agregado`)} className='absolute z-20 w-[100px] text-gray-500 hover:text-gray-900 flex 
               items-center gap-1 top-0 text-sm transform -translate-x-32 group-hover:translate-x-0
               transition-transform cursor-pointer duration-500'>
               Agregar
@@ -71,6 +73,18 @@ const  ProductsCard = ({product}) => {
           )}
         </section>
       </section>
+      <ToastContainer
+        position="top-left"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+       />
     </main>
   )
 };

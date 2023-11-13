@@ -3,6 +3,8 @@ import { MdOutlineStar } from 'react-icons/md';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { addToCart } from '../redux/bazarSlice';
+import {ToastContainer, toast} from 'react-toastify';
+
 
 const Product = () => {
   const dispatch = useDispatch();
@@ -82,7 +84,9 @@ const Product = () => {
                 price: details.price,
                 quantity: baseQty,
                 description: details.description,
-              }))}
+                })
+              ) & toast.success(`${details.title} es agregado`)
+            }
               className='bg-black text-white py-3 px-6 active:bg-gray-800'>
                 Agregar compra
               </button>
@@ -94,6 +98,18 @@ const Product = () => {
           </p>
         </div>
       </section>
+      <ToastContainer
+        position="top-left"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+       />
     </main>
   );
 };
