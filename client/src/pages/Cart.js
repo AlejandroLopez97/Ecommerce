@@ -30,7 +30,7 @@ const Cart = () => {
           </div>
           <p className='font-titleFont font-semibold flex justify-between mt-6'>
             {" "}
-            Total <span className='text-xl font-bold'>$</span>
+            Total <span className='text-xl font-bold'>$200</span>
           </p>
           <button className='text-base bg-black text-white w-full py-3 mt-6 hover:bg-gray-800 duration-300'>Proceder con el pago</button>
         </div>
